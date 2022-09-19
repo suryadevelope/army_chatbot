@@ -1,0 +1,25 @@
+version: "3.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: action_data_from_pdf
+    examples: |
+      - what are the [details](type) of [surya](name)
+      - Get the [details](type) of [surya](name)
+      - what is the [date of birth](type) of [surya](name)
+    

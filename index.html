@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet " href="/css/styles.css">
+</head>
+
+<body>
+    <div id="chat-container"></div>
+
+
+</body>
+<script src="/js/chat.js"></script>
+
+<script>
+    createChatBot(host = 'http://localhost:5505/webhooks/rest/webhook',
+        botLogo = "./assets/bot-logo.png",
+        title = "Swarnandhra college", welcomeMessage = "Hi, How can i help you? ",
+        inactiveMsg = "Server is down, Please contact the developer to activate it ",
+        theme = "blue ")
+</script>
+
+</html>
