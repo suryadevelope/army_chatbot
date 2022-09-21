@@ -29,8 +29,8 @@ class ActionCurrentTemperature(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        name_slot = tracker.get_slot("name").lower()
-        type_slot = tracker.get_slot("type").lower()
+        name_slot = tracker.get_slot("name")
+        type_slot = tracker.get_slot("type")
 
         print(name_slot)
         print(type_slot)
@@ -47,7 +47,7 @@ class ActionCurrentTemperature(Action):
                         message = "The age of {} is {} years".format(name_slot, row['Age'])
 
                     elif(type_slot.find("details")!=-1):
-                        message = "The Details of {} are as below \n name:{} \n Position{} \n Office: {} \n Salary: {} ".format(name_slot, name_slot,row['Position'],row['Office'],row['Salary'],row['Age'])
+                        message = "The Details of {} are as below \n name:{} \n Position:{} \n Office: {} \n Salary: {} ".format(name_slot, name_slot,row['Position'],row['Office'],row['Salary'],row['Age'])
 
                         print(message)
 
