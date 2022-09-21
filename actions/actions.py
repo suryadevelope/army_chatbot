@@ -38,14 +38,16 @@ class ActionCurrentTemperature(Action):
         
 
         for row in reader:
-        if(row['Name'] == name_slot):
-            print(row['Age'])
-            if(type_slot.find("date of birth") or type_slot.find("dob")):
+            if(row['Name'] == name_slot):
+                print(row['Age'])
+                if(type_slot.find("date of birth") or type_slot.find("dob")):
+                    print(row['Date of Birth'])
 
-            elif(type_slot.find("details")):
+                elif(type_slot.find("details")):
+                    print(row)
 
-            dispatcher.utter_message(
-                text="Well, the current temperature is {}".format(temp))
+                dispatcher.utter_message(
+                    text="Well, the details are {}".format(row))
 
         return [SlotSet("name", None),SlotSet("type", None)]
 
