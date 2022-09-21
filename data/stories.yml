@@ -9,5 +9,5 @@ stories:
 
   - story: current_temperature
     steps:
-      - intent: current_temperature
-      - action: action_current_temperature
+      - intent: data_from_pdf
+      - action: action_data_from_pdf

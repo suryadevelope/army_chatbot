@@ -270,36 +270,3 @@ function createChatBot(
 
   chatbotTheme(theme);
 }
-
-createChatBot(
-  (host = "http://localhost:5005/webhooks/rest/webhook"),
-  (botLogo = "./imgs/bot-logo2.png "),
-  (title = "Covid BOT "),
-  (welcomeMessage = "Hey, i am Covid Bot "),
-  (inactiveMsg =
-    "Server is down, Please contact the developer to activate it "),
-  (theme = "blue ")
-);
-
-
-var speech = true;
-        window.SpeechRecognition = window.SpeechRecognition
-                        || window.webkitSpeechRecognition;
-  
-        const recognition = new SpeechRecognition();
-        recognition.interimResults = true;
-       
-  
-        recognition.addEventListener('result', e => {
-            const transcript = Array.from(e.results)
-                .map(result => result[0])
-                .map(result => result.transcript)
-                .join('')
-  
-            console.log(transcript);
-        });
-          
-        if (speech == true) {
-            recognition.start();
-            recognition.addEventListener('end', recognition.start);
-        }

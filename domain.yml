@@ -1,22 +1,29 @@
 version: "3.0"
 
 actions:
-  - action_current_temperature
+  - action_data_from_pdf
 
 intents:
   - greet
-  - current_temperature
+  - data_from_pdf
 
 entities:
-  - location
+  - name
+  - type
 
 slots:
-  location:
+  name:
     type: text
     influence_conversation: false
     mappings:
       - type: from_entity
-        entity: location
+        entity: name
+  type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: type
 
 responses:
   utter_greet:

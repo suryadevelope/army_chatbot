@@ -17,9 +17,12 @@ nlu:
       - goodevening
       - good afternoon
 
-  - intent: action_data_from_pdf
+  - intent: data_from_pdf
     examples: |
       - what are the [details](type) of [surya](name)
+      - what are the [details](type) of [Airi Satou](name)
       - Get the [details](type) of [surya](name)
+      - Get the [details](type) of [Airi Satou](name)
       - what is the [date of birth](type) of [surya](name)
+      - what is the [date of birth](type) of [Airi Satou](name)
     
