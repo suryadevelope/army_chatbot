@@ -248,6 +248,17 @@ function chatbotTheme(theme) {
     gradientHeader.style.backgroundImage = purple.background;
     chatSubmit.style.backgroundColor = purple.color;
   }
+
+  $(".chat-btn")[0].addEventListener("click", function () {
+    if($(".chat-popup")[0].style.display == "none"){
+  document.getElementById("image").style.display = "block"
+    }else{
+      document.getElementById("image").style.display = "none"
+  
+    }
+  
+  });
+  
 }
 
 function createChatBot(
@@ -270,3 +281,4 @@ function createChatBot(
 
   chatbotTheme(theme);
 }
+

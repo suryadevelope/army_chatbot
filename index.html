@@ -37,37 +37,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <i class="lni-menu"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto w-100 justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#services">About</a>
-            </li>  
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#features">Services</a>
-            </li>                            
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#showcase">Showcase</a>
-            </li>       
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-            </li>     
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#team">Team</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#blog">Blog</a>
-            </li>  
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#contact">Contact</a>
-            </li> 
-            <li class="nav-item">
-              <a class="btn btn-singin" href="#">Download</a>
-            </li>
-          </ul>
-        </div>
+        
       </div>
     </nav>  
     <div class="container">      
@@ -84,32 +54,21 @@
         </div>
         <div class="col-lg-6 col-md-12 col-xs-12 p-0">
           <div class="intro-img">
-            <img src="img/intro.png" alt="">
+            <img id="image" src="img/intro.png" alt="">
           </div>            
         </div>
       </div> 
     </div>             
   </header>
+  <form action = "http://localhost:2456/display" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
   <!-- Header Section End --> 
 
 
-         <!-- Copyright Start  -->
-
-      <div class="copyright">
-        <div class="container">
-          <!-- Star Row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="site-info text-center">
-                <p>Crafted by <a href="http://uideck.com" rel="nofollow">Suryadevelope</a></p>
-              </div>              
-              
-            </div>
-            <!-- End Col -->
-          </div>
-          <!-- End Row -->
-        </div>
-      </div>
+      
     <!-- Copyright End -->
     </section>
     <!-- Footer area End -->
