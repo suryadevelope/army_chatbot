@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 import tabula
 import pandas as pd
+import csv
 
 app = Flask(__name__)
 
@@ -23,24 +24,24 @@ def save_file():
         data1 = pd.read_csv('./static/foo.csv')
         data2 = pd.read_csv('./assets/foo.csv')
 
-        output1 = pd.merge(data1, data2)
-        # print(output1)
+        output1 = data1.merge(data2)
+        print(output1)
         print("okokokok")
         # with open('./assets/foo.csv', 'wb') as outfile:
         #     for item in output1:
         #         outfile.write(item)
 
-        with open("./assets/foo.csv", 'w') as tempfile:
-            writer = csv.DictWriter(tempfile, fieldnames=fields)
-            for row in output1:
-                print(row)
-                writer.writerow(row)
-            condition = 1
-        while(condition == 0):   
+        # with open("./assets/foo.csv", 'w') as tempfile:
+        #     writer = csv.DictWriter(tempfile, fieldnames=['Name',"Position","Office","Age","Start date","Salary"])
+        #     for row in output1:
+        #         print(row)
+        #         # writer.writerow(row)
+        #     condition = 1
+        # while(condition == 0):   
             
-            if(condition == 1):
-                break
-        return
+        #     if(condition == 1):
+        #         break
+        # return
 
 
         # file = open(app.config['UPLOAD_FOLDER'] + filename,"r")
