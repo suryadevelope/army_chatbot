@@ -21,12 +21,17 @@ def save_file():
         condition = 0
 
         # reading two csv files
-        data1 = pd.read_csv('./static/foo.csv')
-        data2 = pd.read_csv('./assets/foo.csv')
+        # data1 = pd.read_csv('./static/foo.csv')
+        # data2 = pd.read_csv('./assets/foo.csv')
 
-        output1 = data1.merge(data2)
-        print(output1)
+        # output1 = data1.merge(data2)
+        # print(output1)
         print("okokokok")
+
+
+        df_master = pd.read_csv('./assets/foo.csv')
+        df = pd.read_csv('./static/foo.csv')
+        df.to_csv('./assets/foo.csv', mode='a', header=False, index=False)
         # with open('./assets/foo.csv', 'wb') as outfile:
         #     for item in output1:
         #         outfile.write(item)

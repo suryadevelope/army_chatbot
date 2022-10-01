@@ -32,24 +32,30 @@ class ActionCurrentTemperature(Action):
         name_slot = tracker.get_slot("name")
         type_slot = tracker.get_slot("type")
 
-        print(name_slot)
-        print(type_slot)
+        print(name_slot.lower())
+        print(type_slot.lower())
 
 
         with open('./assets/foo.csv') as csvfile:
             reader = csv.DictReader(csvfile)
             message = "no message"
             for row in reader:
-                if(row['Name'].lower() == name_slot.lower()):
+                if(row['NAME'].lower() == name_slot.lower()):
                     # print(row['Age'])
-                    if(type_slot.find("date of birth") !=-1 or type_slot.find("dob")!=-1):
-                        print(row['Age'])
-                        message = "The age of {} is {} years".format(name_slot, row['Age'])
+                    if(type_slot.find("army number") !=-1):
+                        print(row['ARMY NO'])
+                        message = "The army number of {} is {} ".format(name_slot, row['ARMY NO'])
 
                     elif(type_slot.find("details")!=-1):
-                        message = "The Details of {} are as below \n name:{} \n Position:{} \n Office: {} \n Salary: {} ".format(name_slot, name_slot,row['Position'],row['Office'],row['Salary'],row['Age'])
+                        message = "The Details of {} are as below \n name:{} \n Army no:{} \n Rank: {} \n Mobile no: {} ".format(name_slot, name_slot,row['ARMY NO'],row['RANK'],row['MOB NO'])
 
                         print(message)
+                    elif(type_slot.find("rank")!=-1):
+                        print(row['RANK'])
+                        message = "The Rank of {} is {} ".format(name_slot, row['RANK'])
+                    elif(type_slot.find("mobile")!=-1 or type_slot.find("mobile number")!=-1):
+                        print(row['MOB NO'])
+                        message = "The Mobile number of {} is {} ".format(name_slot, row['MOB NO'])
 
                     dispatcher.utter_message(
                         text="Well, {}".format(message))

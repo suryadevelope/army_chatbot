@@ -21,10 +21,28 @@ nlu:
     examples: |
       - what are the [details](type) of [surya](name)
       - what are the [details](type) of [Airi Satou](name)
+      - what are the [details](type) of [GAJRAJ ANJANA](name)
+      - what are the [details](type) of [PAWAN KUMAR](name)
+      - what are the [details](type) of [MEHAR CHAND](name)
+      - what are the [details](type) of [BANDARA YAPA YMD](name)
       - Get the [details](type) of [surya](name)
       - Get the [details](type) of [Airi Satou](name)
+      - Get the [details](type) of [MEHAR CHAND](name)
+      - Get the [details](type) of [BANDARA YAPA YMD](name)
       - what is the [date of birth](type) of [surya](name)
       - what is the [date of birth](type) of [Airi Satou](name)
+      - what is the [rank](type) of [MEHAR CHAND](name)
+      - what is the [army number](type) of [MEHAR CHAND](name)
+      - what is the [mobile number](type) of [MEHAR CHAND](name)
+      - what is the [rank](type) of [PAWAN KUMAR](name)
+      - what is the [army number](type) of [PAWAN KUMAR](name)
+      - what is the [mobile number](type) of [PAWAN KUMAR](name)
+      - what is the [rank](type) of [GAJRAJ ANJANA](name)
+      - what is the [rank](type) of [BANDARA YAPA YMD](name)
+      - what is the [army number](type) of [GAJRAJ ANJANA](name)
+      - what is the [army number](type) of [BANDARA YAPA YMD](name)
+      - what is the [mobile number](type) of [GAJRAJ ANJANA](name)
+      - what is the [mobile number](type) of [BANDARA YAPA YMD](name)
 
   - intent: upload_file
       - upload file
